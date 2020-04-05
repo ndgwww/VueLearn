@@ -1,0 +1,220 @@
+<html>
+<head>
+  <title>Evernote Export</title>
+  <basefont face="新宋体" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="YXBJ Windows/601620 (zh-CN, DDL); Windows/10.0.0 (Win64); EDAMVersion=V2;"/>
+  <meta name="content-class" content="yinxiang.markdown"/>
+  <style>
+    body, td {
+      font-family: 新宋体;
+      font-size: 14pt;
+    }
+  </style>
+</head>
+<body>
+<a name="4129"/>
+<h1>Vue基础二</h1>
+<div>
+<table bgcolor="#D4DDE5" border="0">
+<tr><td><b>创建时间：</b></td><td><i>2020/3/18 17:14</i></td></tr>
+<tr><td><b>更新时间：</b></td><td><i>2020/4/1 0:36</i></td></tr>
+<tr><td><b>作者：</b></td><td><i>白白LDG</i></td></tr>
+</table>
+</div>
+<br/>
+
+<div><span><div style="font-size: 14px; margin: 0; padding: 0; width: 100%;"><div style="line-height: 160%; box-sizing: content-box;"><ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;"><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">Vue脚手架安装：
+</a><ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333; margin-top: 0; margin-bottom: 0;"><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">第一步：下载安装node.js
+</a></li><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">第二步：安装淘宝镜像(cnpm)，
+</a></li><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">第三步:安装全局vue
+</a></li><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">第四步：安装 vue脚手架
+</a><ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333; margin-top: 0; margin-bottom: 0;"><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">vue cli可视化工具
+</a></li></ul></li><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">创建第一个vuecli项目：
+</a><ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333; margin-top: 0; margin-bottom: 0;"><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">图像界面创建：
+</a></li><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">用命令行创建：
+</a></li></ul></li><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">项目目录讲解
+</a></li><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">项目运行分析
+</a></li><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">cli项目写法：
+</a></li></ul></li></ul></div><h3 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 27px; color: #333;">Vue脚手架安装：</h3>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">第一步：下载安装node.js</h4>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><a href="https://nodejs.org/en/" style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">node.js下载网址</a><br/>
+直接下一步下一步傻瓜式安装，这里可以改一下盘符为D:\Program Files\nodejs<br/>
+可以执行 node -v 和 npm -v 分别查看node和npm的版本号：<br/>
+关于环境配置，你可以更改，默认环境配置也没有问题：如果上面操作没有反应可以如下配置<br/>
+<img src="Vue基础二_files/Image.png" type="image/png" data-filename="Image.png"/><br/>
+但是这种配置：以后在执行类似：npm install express [-g] （后面的可选参数-g，g代表global全局安装的意思）的安装语句时，会将安装的模块安装到【C:\Users\用户名\AppData\Roaming\npm】路径中，占C盘空间。<br/>
+<img src="Vue基础二_files/Image [1].png" type="image/png" data-filename="Image.png"/><br/>
+修改缓存环境配置：<br/>
+【D:\Program Files\nodejs】下创建两个文件夹【node_global】及【node_cache】<br/>
+然后输入：都有空格记得</p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">npm config set prefix &quot;D:\Program Files\nodejs\node_global&quot;
+npm config set cache &quot;D:\Program Files\nodejs\node_cache&quot;
+</code></pre>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">查看npm的本地仓库:npm list -global</p>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">完整环境配置：</strong><br/>
+用户变量：这里填写上面的本地仓库<br/>
+<img src="Vue基础二_files/Image [2].png" type="image/png" data-filename="Image.png"/><br/>
+系统变量<br/>
+系统变量中新建一个变量名为 “NODE_PATH”， 值为“D:\Program Files\nodejs\node_modules”<br/>
+<img src="Vue基础二_files/Image [3].png" type="image/png" data-filename="Image.png"/><br/>
+系统变量<br/>
+<img src="Vue基础二_files/Image [4].png" type="image/png" data-filename="Image.png"/><br/>
+这里可以：<br/>
+安装个module测试下 执行npm install express -g  （-g是全局安装）<br/>
+如果你想安装： webpack<br/>
+命令行直接vue init webpack vue_demo</p>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">第二步：安装淘宝镜像(cnpm)，</h4>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">注:npm是国外的服务器，所以出现下载慢或者出现异常。推荐淘宝镜像及cnpm来下载npm<br/>
+使用cnpm的方法就是，需要用到npm的地方直接使用cnpm替换就可以了</p>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><a href="https://developer.aliyun.com/mirror/NPM?from=tnpm" style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">淘宝npm镜像网站</a><br/>
+控制台直接输入(windows下不加‘$$’)<br/>
+$ npm install -g cnpm --registry=https://registry.npm.taobao.org<br/>
+输入cnpm -v，可以查看当前cnpm版本，</p>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">第三步:安装全局vue</h4>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">控制台执行命令:npm install -g vue</p>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">第四步：安装 vue脚手架</h4>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">这个推荐安装Vue CLI</p>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><a href="https://cli.vuejs.org/zh/guide/installation.html" style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">cli官方安装网站</a><br/>
+控制台执行：<br/>
+npm install -g @vue/cli<br/>
+或者<br/>
+yarn global add @vue/cli<br/>
+可以执行：检查版本<br/>
+vue --version<br/>
+要用vue-cli 2.x版本语法（vue init），需下载一个桥接工具（v2和v3的语法都可以用）<br/>
+npm install -g @vue/cli-init</p>
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">vue cli可视化工具</h5>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">命令行执行: vue ui<br/>
+ctrl +c是停止<br/>
+在浏览器中打开http://localhost:8000</p>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">创建第一个vuecli项目：</h4>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">这里注意要先切换到你要创建文件的目录下<br/>
+如切换到D盘下的对应文件夹<br/>
+<img src="Vue基础二_files/Image [5].png" type="image/png" data-filename="Image.png"/></p>
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">图像界面创建：</h5>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">目前只推荐开启路由，其他都可以关闭<br/>
+<img src="Vue基础二_files/Image [6].png" type="image/png" data-filename="Image.png"/><br/>
+这里选择：<br/>
+<img src="Vue基础二_files/Image [7].png" type="image/png" data-filename="Image.png"/><br/>
+这是创建完成后的结果图：<br/>
+<img src="Vue基础二_files/Image [8].png" type="image/png" data-filename="Image.png"/></p>
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">用命令行创建：</h5>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">一：命令行创建文件：vue init webpack 项目名</p>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">ps：注：项目名不能大写，不能使用中文</li>
+</ul>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">二：对应选择各个参数：<br/>
+<img src="Vue基础二_files/Image [9].png" type="image/png" data-filename="Image.png"/></p>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">参数讲解：<br/>
+vue init webpack projectName--------------------- 安装vue-cli,初始化vue项目的命令<br/>
+Target directory exists. Continue? (Y/n) y---------------------找到了projectName这个目录是否要继续<br/>
+Project name (projectName)---------------------项目的名称（默认是文件夹的名称），ps：项目的名称不能有大写，不能有中文，否则会报错<br/>
+Project description (A Vue.js project)---------------------项目描述，可以自己写<br/>
+Author (OBKoro1)---------------------项目创建者<br/>
+Vue build (Use arrow keys)--------------------选择打包方式，有两种方式（runtime和standalone），使用默认 standalone即可<br/>
+Install vue-router? (Y/n) y--------------------是否安装路由，一般都要安装<br/>
+Use ESLint to lint your code? (Y/n) n---------------------是否启用eslint检测规则，这里个人建议选no，因为经常会各种代码报错，新手还是不安装好<br/>
+Setup unit tests with Karma + Mocha? (Y/n)--------------------是否安装单元测试<br/>
+Setup e2e tests with Nightwatch? (Y/n) y)--------------------是否安装e2e测试</li>
+</ul>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">三：进入到项目目录： cd 项目名</p>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">四：安装项目依赖。命令行： npm install</p>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">五：在项目目录下执行运行命令  npm run dev</p>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">项目目录讲解</h4>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><img src="Vue基础二_files/Image [10].png" type="image/png" data-filename="Image.png"/><br/>
+<img src="Vue基础二_files/Image [11].png" type="image/png" data-filename="Image.png"/><br/>
+build 文件夹及子目录</p>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">这里面是一些webpack的配置，主要用于项目打包时的一些设置。</li>
+</ul>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">config 文件及子目录</p>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">这个文件夹里装的是整个项目 开发运行时的一些配置，比如npm run dev 时 项目的启动端口 之类的 。</li>
+</ul>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">node_modules 文件及子目录</p>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">这个文件夹里面全部都是node的一些基础的依赖包，当我们拓展的安装一些别的插件时 也会装在这个文件夹里。</li>
+</ul>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">src 文件及子目录</p>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">这个文件夹是整个项目的主文件夹 ，我们的代码大部分都在这里完成。来具体的看一下里面的</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">assets 文件夹里面主要放置一些资源文件。
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333; margin-top: 0; margin-bottom: 0;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">比如js 、css 之类的文件。</li>
+</ul>
+</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">components 文件夹可以说是vue 的 灵魂了
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333; margin-top: 0; margin-bottom: 0;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">组件文件全部都可以放到这里面。</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">一个vue项目就是由一个个的组件拼装起来的。</li>
+</ul>
+</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">router文件夹及子目录
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333; margin-top: 0; margin-bottom: 0;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">这个文件夹里的是整个vue项目的路由，vue 是单页面应用的代表，这里面就是设置一个一个组件的地址的文件。 app 文件</li>
+</ul>
+</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">app 文件：这个文件是整个项目的入口文件，相当于包裹整个页面的最外层的div。</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">main.js 文件：这个文件是项目的主js,全局的使用的各种变量、js、插件 都在这里引入 、定义。</li>
+</ul>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">static 文件夹及子目录：这个文件夹里是一些静态资源文件。</p>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">index 文件：就是项目的承载页面。</p>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">package 文件：是整个项目用的到的所有的插件的json的格式</p>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">比如这个插件的名称，版本号。 当在项目里使用npm install 时 node 会自动安装， 这个文件里的所有插件。</li>
+</ul>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><img src="Vue基础二_files/Image [12].png" type="image/png" data-filename="Image.png"/></p>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">还有一个隐藏文件：<br/>
+<img src="Vue基础二_files/Image [13].png" type="image/png" data-filename="Image.png"/><br/>
+这个dist 文件夹 是在执行了 npm run build 打包指令之后才会出现的， 整个项目写好之，打包出来的所有文件都会在这里，只需要访问文件夹里的index文件可以进入应用了</p>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">项目运行分析</h4>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">程序的入口：</strong><br/>
+首先,项目通过webpack进行打包,需要配置一个入口文件在脚手架工程中,入口文件的配置文件位于build/webpack.base.conf.js ：为dev和prod配置文件公用配置,分别在dev和prod配置中被导入<br/>
+<img src="Vue基础二_files/Image [14].png" type="image/png" data-filename="Image.png"/><br/>
+入口文件指向了src/main.js,(webpack对项目的打包入口为main.js)</p>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">在入口文件main.js中</strong><br/>
+<img src="Vue基础二_files/Image [15].png" type="image/png" data-filename="Image.png"/><br/>
+引入了Vue,根组件App,和路由插件router<br/>
+并在初始化Vue实例时,</p>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">配置挂载到#app,</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">注册router插件,</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">使用App根组件挂载的#app位于项目跟目录的index.html中</li>
+</ul>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">index.html</strong><br/>
+表面上是一个空的html文档,仅提供了一个挂载点。<br/>
+实际并不是这样,这个index.html是作为一个模板存在的,<br/>
+这里涉及到webpack的插件HtmlWebpackPlugin</p>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">在build/webpack.dev.conf.js</li>
+</ul>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><img src="Vue基础二_files/Image [16].png" type="image/png" data-filename="Image.png"/></p>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">HtmlWebpackPlugin插件能根据模板生成html,并为生成的html页面添加静态资源引用script标签</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">所以我们看到的index.html并没有引用webpack打包后的静态资源文件</li>
+</ul>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">根组件App</strong><br/>
+分为三个部分:基本上所有的.vue单文件组件文件分为三个部分:</p>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">template: 组件的模板Html 可使用是写html的形式声明组件模板,不再需要拼接字符串</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">script: 组件的js代码</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">style: 组件的CSS样式 可添加scoped属性,使CSS只对当前组件有效<br/>
+template中使用了&lt;router-view/&gt;用于路由页面切换(SPA单页面应用)<br/>
+路由配置在src/router/index.js中</li>
+</ul>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">路由配置src/router/index.js</strong></p>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">src/router/index.js最终导出了一个配置了路由的路由器实例</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">src/router/index.js在入口文件main中被引入,并在实例化vue时注入</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">由于默认路径/使用组件HelloWorld进行显示(&lt;router-view/&gt;)</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">所以访问http://localhost:8080/#/时,现实的视图是HelloWorld组件样式</li>
+</ul>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">如果需要VUE项目关闭Eslint语法检测的方法</strong><br/>
+<img src="Vue基础二_files/Image [17].png" type="image/png" data-filename="Image.png"/></p>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">cli项目写法：</h4>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">第一：<br/>
+<img src="Vue基础二_files/Image [18].png" type="image/png" data-filename="Image.png"/></p>
+</div><center style="display:none !important;visibility:collapse !important;height:0 !important;white-space:nowrap;width:100%;overflow:hidden">%5Btoc%5D%0A%0A%23%23%23%20Vue%E8%84%9A%E6%89%8B%E6%9E%B6%E5%AE%89%E8%A3%85%EF%BC%9A%0A%23%23%23%23%20%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85node.js%0A%5Bnode.js%E4%B8%8B%E8%BD%BD%E7%BD%91%E5%9D%80%5D(https%3A%2F%2Fnodejs.org%2Fen%2F)%0A%E7%9B%B4%E6%8E%A5%E4%B8%8B%E4%B8%80%E6%AD%A5%E4%B8%8B%E4%B8%80%E6%AD%A5%E5%82%BB%E7%93%9C%E5%BC%8F%E5%AE%89%E8%A3%85%EF%BC%8C%E8%BF%99%E9%87%8C%E5%8F%AF%E4%BB%A5%E6%94%B9%E4%B8%80%E4%B8%8B%E7%9B%98%E7%AC%A6%E4%B8%BAD%3A%5CProgram%20Files%5Cnodejs%0A%E5%8F%AF%E4%BB%A5%E6%89%A7%E8%A1%8C%20node%20-v%20%E5%92%8C%20npm%20-v%20%E5%88%86%E5%88%AB%E6%9F%A5%E7%9C%8Bnode%E5%92%8Cnpm%E7%9A%84%E7%89%88%E6%9C%AC%E5%8F%B7%EF%BC%9A%0A%E5%85%B3%E4%BA%8E%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%EF%BC%8C%E4%BD%A0%E5%8F%AF%E4%BB%A5%E6%9B%B4%E6%94%B9%EF%BC%8C%E9%BB%98%E8%AE%A4%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E4%B9%9F%E6%B2%A1%E6%9C%89%E9%97%AE%E9%A2%98%EF%BC%9A%E5%A6%82%E6%9E%9C%E4%B8%8A%E9%9D%A2%E6%93%8D%E4%BD%9C%E6%B2%A1%E6%9C%89%E5%8F%8D%E5%BA%94%E5%8F%AF%E4%BB%A5%E5%A6%82%E4%B8%8B%E9%85%8D%E7%BD%AE%0A!%5Beeac1030ab7a98f3f4e9a4d687ad0b0e.png%5D(en-resource%3A%2F%2Fdatabase%2F4215%3A2)%0A%E4%BD%86%E6%98%AF%E8%BF%99%E7%A7%8D%E9%85%8D%E7%BD%AE%EF%BC%9A%E4%BB%A5%E5%90%8E%E5%9C%A8%E6%89%A7%E8%A1%8C%E7%B1%BB%E4%BC%BC%EF%BC%9Anpm%20install%20express%20%5B-g%5D%20%EF%BC%88%E5%90%8E%E9%9D%A2%E7%9A%84%E5%8F%AF%E9%80%89%E5%8F%82%E6%95%B0-g%EF%BC%8Cg%E4%BB%A3%E8%A1%A8global%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85%E7%9A%84%E6%84%8F%E6%80%9D%EF%BC%89%E7%9A%84%E5%AE%89%E8%A3%85%E8%AF%AD%E5%8F%A5%E6%97%B6%EF%BC%8C%E4%BC%9A%E5%B0%86%E5%AE%89%E8%A3%85%E7%9A%84%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85%E5%88%B0%E3%80%90C%3A%5CUsers%5C%E7%94%A8%E6%88%B7%E5%90%8D%5CAppData%5CRoaming%5Cnpm%E3%80%91%E8%B7%AF%E5%BE%84%E4%B8%AD%EF%BC%8C%E5%8D%A0C%E7%9B%98%E7%A9%BA%E9%97%B4%E3%80%82%0A!%5Bfa7ad0ae7eafdbf9a5450354e63885b6.png%5D(en-resource%3A%2F%2Fdatabase%2F4225%3A1)%0A%E4%BF%AE%E6%94%B9%E7%BC%93%E5%AD%98%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%EF%BC%9A%0A%E3%80%90D%3A%5CProgram%20Files%5Cnodejs%E3%80%91%E4%B8%8B%E5%88%9B%E5%BB%BA%E4%B8%A4%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E3%80%90node_global%E3%80%91%E5%8F%8A%E3%80%90node_cache%E3%80%91%0A%E7%84%B6%E5%90%8E%E8%BE%93%E5%85%A5%EF%BC%9A%E9%83%BD%E6%9C%89%E7%A9%BA%E6%A0%BC%E8%AE%B0%E5%BE%97%0A%0A%20%20%20%20npm%20config%20set%20prefix%20%22D%3A%5CProgram%20Files%5Cnodejs%5Cnode_global%22%0A%20%20%20%20npm%20config%20set%20cache%20%22D%3A%5CProgram%20Files%5Cnodejs%5Cnode_cache%22%0A%20%20%20%20%0A%E6%9F%A5%E7%9C%8Bnpm%E7%9A%84%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%3Anpm%20list%20-global%0A%0A**%E5%AE%8C%E6%95%B4%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%EF%BC%9A**%0A%E7%94%A8%E6%88%B7%E5%8F%98%E9%87%8F%EF%BC%9A%E8%BF%99%E9%87%8C%E5%A1%AB%E5%86%99%E4%B8%8A%E9%9D%A2%E7%9A%84%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%0A!%5B5ec9ce77a54de77860fa80609ed8201c.png%5D(en-resource%3A%2F%2Fdatabase%2F4211%3A1)%0A%E7%B3%BB%E7%BB%9F%E5%8F%98%E9%87%8F%0A%E7%B3%BB%E7%BB%9F%E5%8F%98%E9%87%8F%E4%B8%AD%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8F%98%E9%87%8F%E5%90%8D%E4%B8%BA%20%E2%80%9CNODE_PATH%E2%80%9D%EF%BC%8C%20%E5%80%BC%E4%B8%BA%E2%80%9CD%3A%5CProgram%20Files%5Cnodejs%5Cnode_modules%E2%80%9D%0A!%5B8c1c91deeecc114a22e34e7b6a203686.png%5D(en-resource%3A%2F%2Fdatabase%2F4213%3A1)%0A%E7%B3%BB%E7%BB%9F%E5%8F%98%E9%87%8F%0A!%5Beeac1030ab7a98f3f4e9a4d687ad0b0e.png%5D(en-resource%3A%2F%2Fdatabase%2F4215%3A2)%0A%E8%BF%99%E9%87%8C%E5%8F%AF%E4%BB%A5%EF%BC%9A%0A%E5%AE%89%E8%A3%85%E4%B8%AAmodule%E6%B5%8B%E8%AF%95%E4%B8%8B%20%E6%89%A7%E8%A1%8Cnpm%20install%20express%20-g%20%C2%A0%EF%BC%88-g%E6%98%AF%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85%EF%BC%89%0A%E5%A6%82%E6%9E%9C%E4%BD%A0%E6%83%B3%E5%AE%89%E8%A3%85%EF%BC%9A%20webpack%0A%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%9B%B4%E6%8E%A5vue%20init%20webpack%20vue_demo%0A%23%23%23%23%20%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%85%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F(cnpm)%EF%BC%8C%0A%E6%B3%A8%3Anpm%E6%98%AF%E5%9B%BD%E5%A4%96%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E6%89%80%E4%BB%A5%E5%87%BA%E7%8E%B0%E4%B8%8B%E8%BD%BD%E6%85%A2%E6%88%96%E8%80%85%E5%87%BA%E7%8E%B0%E5%BC%82%E5%B8%B8%E3%80%82%E6%8E%A8%E8%8D%90%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F%E5%8F%8Acnpm%E6%9D%A5%E4%B8%8B%E8%BD%BDnpm%0A%E4%BD%BF%E7%94%A8cnpm%E7%9A%84%E6%96%B9%E6%B3%95%E5%B0%B1%E6%98%AF%EF%BC%8C%E9%9C%80%E8%A6%81%E7%94%A8%E5%88%B0npm%E7%9A%84%E5%9C%B0%E6%96%B9%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8cnpm%E6%9B%BF%E6%8D%A2%E5%B0%B1%E5%8F%AF%E4%BB%A5%E4%BA%86%0A%5B%E6%B7%98%E5%AE%9Dnpm%E9%95%9C%E5%83%8F%E7%BD%91%E7%AB%99%5D(https%3A%2F%2Fdeveloper.aliyun.com%2Fmirror%2FNPM%3Ffrom%3Dtnpm)%0A%E6%8E%A7%E5%88%B6%E5%8F%B0%E7%9B%B4%E6%8E%A5%E8%BE%93%E5%85%A5(windows%E4%B8%8B%E4%B8%8D%E5%8A%A0%E2%80%98%24%24%E2%80%99)%0A%24%20npm%20install%20-g%20cnpm%20--registry%3Dhttps%3A%2F%2Fregistry.npm.taobao.org%0A%E8%BE%93%E5%85%A5cnpm%20-v%EF%BC%8C%E5%8F%AF%E4%BB%A5%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8Dcnpm%E7%89%88%E6%9C%AC%EF%BC%8C%0A%23%23%23%23%20%E7%AC%AC%E4%B8%89%E6%AD%A5%3A%E5%AE%89%E8%A3%85%E5%85%A8%E5%B1%80vue%0A%E6%8E%A7%E5%88%B6%E5%8F%B0%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4%3Anpm%20install%20-g%20vue%0A%0A%23%23%23%23%20%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%85%20vue%E8%84%9A%E6%89%8B%E6%9E%B6%0A%E8%BF%99%E4%B8%AA%E6%8E%A8%E8%8D%90%E5%AE%89%E8%A3%85Vue%20CLI%20%0A%5Bcli%E5%AE%98%E6%96%B9%E5%AE%89%E8%A3%85%E7%BD%91%E7%AB%99%5D(https%3A%2F%2Fcli.vuejs.org%2Fzh%2Fguide%2Finstallation.html)%0A%E6%8E%A7%E5%88%B6%E5%8F%B0%E6%89%A7%E8%A1%8C%EF%BC%9A%0Anpm%20install%20-g%20%40vue%2Fcli%0A%E6%88%96%E8%80%85%0Ayarn%20global%20add%20%40vue%2Fcli%0A%E5%8F%AF%E4%BB%A5%E6%89%A7%E8%A1%8C%EF%BC%9A%E6%A3%80%E6%9F%A5%E7%89%88%E6%9C%AC%0Avue%20--version%0A%E8%A6%81%E7%94%A8vue-cli%202.x%E7%89%88%E6%9C%AC%E8%AF%AD%E6%B3%95%EF%BC%88vue%20init%EF%BC%89%EF%BC%8C%E9%9C%80%E4%B8%8B%E8%BD%BD%E4%B8%80%E4%B8%AA%E6%A1%A5%E6%8E%A5%E5%B7%A5%E5%85%B7%EF%BC%88v2%E5%92%8Cv3%E7%9A%84%E8%AF%AD%E6%B3%95%E9%83%BD%E5%8F%AF%E4%BB%A5%E7%94%A8%EF%BC%89%0Anpm%20install%20-g%20%40vue%2Fcli-init%0A%0A%23%23%23%23%23%20vue%20cli%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B7%A5%E5%85%B7%0A%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%89%A7%E8%A1%8C%3A%20vue%20ui%0Actrl%20%2Bc%E6%98%AF%E5%81%9C%E6%AD%A2%0A%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E6%89%93%E5%BC%80http%3A%2F%2Flocalhost%3A8000%0A%0A%23%23%23%23%20%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AAvuecli%E9%A1%B9%E7%9B%AE%EF%BC%9A%0A%E8%BF%99%E9%87%8C%E6%B3%A8%E6%84%8F%E8%A6%81%E5%85%88%E5%88%87%E6%8D%A2%E5%88%B0%E4%BD%A0%E8%A6%81%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E7%9A%84%E7%9B%AE%E5%BD%95%E4%B8%8B%0A%E5%A6%82%E5%88%87%E6%8D%A2%E5%88%B0D%E7%9B%98%E4%B8%8B%E7%9A%84%E5%AF%B9%E5%BA%94%E6%96%87%E4%BB%B6%E5%A4%B9%0A!%5B2d3c0b39e841c29441efcf1c94faeb06.png%5D(en-resource%3A%2F%2Fdatabase%2F4227%3A1)%0A%0A%23%23%23%23%23%20%E5%9B%BE%E5%83%8F%E7%95%8C%E9%9D%A2%E5%88%9B%E5%BB%BA%EF%BC%9A%0A%E7%9B%AE%E5%89%8D%E5%8F%AA%E6%8E%A8%E8%8D%90%E5%BC%80%E5%90%AF%E8%B7%AF%E7%94%B1%EF%BC%8C%E5%85%B6%E4%BB%96%E9%83%BD%E5%8F%AF%E4%BB%A5%E5%85%B3%E9%97%AD%0A!%5Bbf1fb8356365e51b6ce82b33a4ec83d2.png%5D(en-resource%3A%2F%2Fdatabase%2F4217%3A1)%0A%E8%BF%99%E9%87%8C%E9%80%89%E6%8B%A9%EF%BC%9A%0A!%5Bf4ddb0a7a6bd4b81ecee9be4a32f33a0.png%5D(en-resource%3A%2F%2Fdatabase%2F4219%3A1)%0A%E8%BF%99%E6%98%AF%E5%88%9B%E5%BB%BA%E5%AE%8C%E6%88%90%E5%90%8E%E7%9A%84%E7%BB%93%E6%9E%9C%E5%9B%BE%EF%BC%9A%0A!%5Ba95a99ff837fa5a73b01eeaa87614e4d.png%5D(en-resource%3A%2F%2Fdatabase%2F4221%3A1)%0A%23%23%23%23%23%20%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%88%9B%E5%BB%BA%EF%BC%9A%0A%0A%E4%B8%80%EF%BC%9A%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%EF%BC%9Avue%20init%20webpack%20%E9%A1%B9%E7%9B%AE%E5%90%8D%0A%0A*%20ps%EF%BC%9A%E6%B3%A8%EF%BC%9A%E9%A1%B9%E7%9B%AE%E5%90%8D%E4%B8%8D%E8%83%BD%E5%A4%A7%E5%86%99%EF%BC%8C%E4%B8%8D%E8%83%BD%E4%BD%BF%E7%94%A8%E4%B8%AD%E6%96%87%0A%0A%E4%BA%8C%EF%BC%9A%E5%AF%B9%E5%BA%94%E9%80%89%E6%8B%A9%E5%90%84%E4%B8%AA%E5%8F%82%E6%95%B0%EF%BC%9A%0A!%5B08983827fabe03e45c378dbce10f7494.png%5D(en-resource%3A%2F%2Fdatabase%2F4229%3A1)%0A%0A*%20%E5%8F%82%E6%95%B0%E8%AE%B2%E8%A7%A3%EF%BC%9A%0Avue%20init%20webpack%20projectName---------------------%20%E5%AE%89%E8%A3%85vue-cli%2C%E5%88%9D%E5%A7%8B%E5%8C%96vue%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%91%BD%E4%BB%A4%0ATarget%20directory%20exists.%20Continue%3F%20(Y%2Fn)%20y---------------------%E6%89%BE%E5%88%B0%E4%BA%86projectName%E8%BF%99%E4%B8%AA%E7%9B%AE%E5%BD%95%E6%98%AF%E5%90%A6%E8%A6%81%E7%BB%A7%E7%BB%AD%0AProject%20name%20(projectName)---------------------%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%90%8D%E7%A7%B0%EF%BC%88%E9%BB%98%E8%AE%A4%E6%98%AF%E6%96%87%E4%BB%B6%E5%A4%B9%E7%9A%84%E5%90%8D%E7%A7%B0%EF%BC%89%EF%BC%8Cps%EF%BC%9A%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%90%8D%E7%A7%B0%E4%B8%8D%E8%83%BD%E6%9C%89%E5%A4%A7%E5%86%99%EF%BC%8C%E4%B8%8D%E8%83%BD%E6%9C%89%E4%B8%AD%E6%96%87%EF%BC%8C%E5%90%A6%E5%88%99%E4%BC%9A%E6%8A%A5%E9%94%99%0AProject%20description%20(A%20Vue.js%20project)---------------------%E9%A1%B9%E7%9B%AE%E6%8F%8F%E8%BF%B0%EF%BC%8C%E5%8F%AF%E4%BB%A5%E8%87%AA%E5%B7%B1%E5%86%99%0AAuthor%20(OBKoro1)---------------------%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA%E8%80%85%0AVue%20build%20(Use%20arrow%20keys)--------------------%E9%80%89%E6%8B%A9%E6%89%93%E5%8C%85%E6%96%B9%E5%BC%8F%EF%BC%8C%E6%9C%89%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F%EF%BC%88runtime%E5%92%8Cstandalone%EF%BC%89%EF%BC%8C%E4%BD%BF%E7%94%A8%E9%BB%98%E8%AE%A4%20standalone%E5%8D%B3%E5%8F%AF%0AInstall%20vue-router%3F%20(Y%2Fn)%20y--------------------%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E8%B7%AF%E7%94%B1%EF%BC%8C%E4%B8%80%E8%88%AC%E9%83%BD%E8%A6%81%E5%AE%89%E8%A3%85%0AUse%20ESLint%20to%20lint%20your%20code%3F%20(Y%2Fn)%20n---------------------%E6%98%AF%E5%90%A6%E5%90%AF%E7%94%A8eslint%E6%A3%80%E6%B5%8B%E8%A7%84%E5%88%99%EF%BC%8C%E8%BF%99%E9%87%8C%E4%B8%AA%E4%BA%BA%E5%BB%BA%E8%AE%AE%E9%80%89no%EF%BC%8C%E5%9B%A0%E4%B8%BA%E7%BB%8F%E5%B8%B8%E4%BC%9A%E5%90%84%E7%A7%8D%E4%BB%A3%E7%A0%81%E6%8A%A5%E9%94%99%EF%BC%8C%E6%96%B0%E6%89%8B%E8%BF%98%E6%98%AF%E4%B8%8D%E5%AE%89%E8%A3%85%E5%A5%BD%0ASetup%20unit%20tests%20with%20Karma%20%2B%20Mocha%3F%20(Y%2Fn)--------------------%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%0ASetup%20e2e%20tests%20with%20Nightwatch%3F%20(Y%2Fn)%20y)--------------------%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85e2e%E6%B5%8B%E8%AF%95%20%0A%0A%E4%B8%89%EF%BC%9A%E8%BF%9B%E5%85%A5%E5%88%B0%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95%EF%BC%9A%20cd%20%E9%A1%B9%E7%9B%AE%E5%90%8D%0A%0A%E5%9B%9B%EF%BC%9A%E5%AE%89%E8%A3%85%E9%A1%B9%E7%9B%AE%E4%BE%9D%E8%B5%96%E3%80%82%E5%91%BD%E4%BB%A4%E8%A1%8C%EF%BC%9A%20npm%20install%0A%0A%E4%BA%94%EF%BC%9A%E5%9C%A8%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%89%A7%E8%A1%8C%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4%20%20npm%20run%20dev%0A%0A%23%23%23%23%20%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95%E8%AE%B2%E8%A7%A3%0A!%5B3b9a1a6f1fb9ab2fef945e40dfb0ad64.png%5D(en-resource%3A%2F%2Fdatabase%2F4233%3A1)%0A!%5B71b1e9b9a8319496072775e75afdf017.png%5D(en-resource%3A%2F%2Fdatabase%2F4237%3A0)%0Abuild%20%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8F%8A%E5%AD%90%E7%9B%AE%E5%BD%95%0A%0A*%20%E8%BF%99%E9%87%8C%E9%9D%A2%E6%98%AF%E4%B8%80%E4%BA%9Bwebpack%E7%9A%84%E9%85%8D%E7%BD%AE%EF%BC%8C%E4%B8%BB%E8%A6%81%E7%94%A8%E4%BA%8E%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E6%97%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE%E3%80%82%0A%0Aconfig%20%E6%96%87%E4%BB%B6%E5%8F%8A%E5%AD%90%E7%9B%AE%E5%BD%95%0A%0A*%20%E8%BF%99%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E9%87%8C%E8%A3%85%E7%9A%84%E6%98%AF%E6%95%B4%E4%B8%AA%E9%A1%B9%E7%9B%AE%20%E5%BC%80%E5%8F%91%E8%BF%90%E8%A1%8C%E6%97%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E9%85%8D%E7%BD%AE%EF%BC%8C%E6%AF%94%E5%A6%82npm%20run%20dev%20%E6%97%B6%20%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%90%AF%E5%8A%A8%E7%AB%AF%E5%8F%A3%20%E4%B9%8B%E7%B1%BB%E7%9A%84%20%E3%80%82%0A%0Anode_modules%20%E6%96%87%E4%BB%B6%E5%8F%8A%E5%AD%90%E7%9B%AE%E5%BD%95%0A%20%0A*%20%E8%BF%99%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E9%87%8C%E9%9D%A2%E5%85%A8%E9%83%A8%E9%83%BD%E6%98%AFnode%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E7%A1%80%E7%9A%84%E4%BE%9D%E8%B5%96%E5%8C%85%EF%BC%8C%E5%BD%93%E6%88%91%E4%BB%AC%E6%8B%93%E5%B1%95%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%80%E4%BA%9B%E5%88%AB%E7%9A%84%E6%8F%92%E4%BB%B6%E6%97%B6%20%E4%B9%9F%E4%BC%9A%E8%A3%85%E5%9C%A8%E8%BF%99%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E9%87%8C%E3%80%82%0A%0Asrc%20%E6%96%87%E4%BB%B6%E5%8F%8A%E5%AD%90%E7%9B%AE%E5%BD%95%0A%0A*%20%E8%BF%99%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E6%98%AF%E6%95%B4%E4%B8%AA%E9%A1%B9%E7%9B%AE%E7%9A%84%E4%B8%BB%E6%96%87%E4%BB%B6%E5%A4%B9%20%EF%BC%8C%E6%88%91%E4%BB%AC%E7%9A%84%E4%BB%A3%E7%A0%81%E5%A4%A7%E9%83%A8%E5%88%86%E9%83%BD%E5%9C%A8%E8%BF%99%E9%87%8C%E5%AE%8C%E6%88%90%E3%80%82%E6%9D%A5%E5%85%B7%E4%BD%93%E7%9A%84%E7%9C%8B%E4%B8%80%E4%B8%8B%E9%87%8C%E9%9D%A2%E7%9A%84%0A*%20assets%20%E6%96%87%E4%BB%B6%E5%A4%B9%E9%87%8C%E9%9D%A2%E4%B8%BB%E8%A6%81%E6%94%BE%E7%BD%AE%E4%B8%80%E4%BA%9B%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E3%80%82%0A%20%20%20%20*%20%E6%AF%94%E5%A6%82js%20%E3%80%81css%20%E4%B9%8B%E7%B1%BB%E7%9A%84%E6%96%87%E4%BB%B6%E3%80%82%0A*%20components%20%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8F%AF%E4%BB%A5%E8%AF%B4%E6%98%AFvue%20%E7%9A%84%20%E7%81%B5%E9%AD%82%E4%BA%86%20%0A%20%20%20%20*%20%E7%BB%84%E4%BB%B6%E6%96%87%E4%BB%B6%E5%85%A8%E9%83%A8%E9%83%BD%E5%8F%AF%E4%BB%A5%E6%94%BE%E5%88%B0%E8%BF%99%E9%87%8C%E9%9D%A2%E3%80%82%0A%20%20%20%20*%20%E4%B8%80%E4%B8%AAvue%E9%A1%B9%E7%9B%AE%E5%B0%B1%E6%98%AF%E7%94%B1%E4%B8%80%E4%B8%AA%E4%B8%AA%E7%9A%84%E7%BB%84%E4%BB%B6%E6%8B%BC%E8%A3%85%E8%B5%B7%E6%9D%A5%E7%9A%84%E3%80%82%20%0A*%20router%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8F%8A%E5%AD%90%E7%9B%AE%E5%BD%95%0A%20%20%20%20*%20%20%E8%BF%99%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E9%87%8C%E7%9A%84%E6%98%AF%E6%95%B4%E4%B8%AAvue%E9%A1%B9%E7%9B%AE%E7%9A%84%E8%B7%AF%E7%94%B1%EF%BC%8Cvue%20%E6%98%AF%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8%E7%9A%84%E4%BB%A3%E8%A1%A8%EF%BC%8C%E8%BF%99%E9%87%8C%E9%9D%A2%E5%B0%B1%E6%98%AF%E8%AE%BE%E7%BD%AE%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E7%BB%84%E4%BB%B6%E7%9A%84%E5%9C%B0%E5%9D%80%E7%9A%84%E6%96%87%E4%BB%B6%E3%80%82%20app%20%E6%96%87%E4%BB%B6%0A*%20%20app%20%E6%96%87%E4%BB%B6%EF%BC%9A%E8%BF%99%E4%B8%AA%E6%96%87%E4%BB%B6%E6%98%AF%E6%95%B4%E4%B8%AA%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%85%A5%E5%8F%A3%E6%96%87%E4%BB%B6%EF%BC%8C%E7%9B%B8%E5%BD%93%E4%BA%8E%E5%8C%85%E8%A3%B9%E6%95%B4%E4%B8%AA%E9%A1%B5%E9%9D%A2%E7%9A%84%E6%9C%80%E5%A4%96%E5%B1%82%E7%9A%84div%E3%80%82%0A*%20%20main.js%20%E6%96%87%E4%BB%B6%EF%BC%9A%E8%BF%99%E4%B8%AA%E6%96%87%E4%BB%B6%E6%98%AF%E9%A1%B9%E7%9B%AE%E7%9A%84%E4%B8%BBjs%2C%E5%85%A8%E5%B1%80%E7%9A%84%E4%BD%BF%E7%94%A8%E7%9A%84%E5%90%84%E7%A7%8D%E5%8F%98%E9%87%8F%E3%80%81js%E3%80%81%E6%8F%92%E4%BB%B6%20%E9%83%BD%E5%9C%A8%E8%BF%99%E9%87%8C%E5%BC%95%E5%85%A5%20%E3%80%81%E5%AE%9A%E4%B9%89%E3%80%82%0A%0Astatic%20%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8F%8A%E5%AD%90%E7%9B%AE%E5%BD%95%EF%BC%9A%E8%BF%99%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E9%87%8C%E6%98%AF%E4%B8%80%E4%BA%9B%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E3%80%82%0A%0Aindex%20%E6%96%87%E4%BB%B6%EF%BC%9A%E5%B0%B1%E6%98%AF%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%89%BF%E8%BD%BD%E9%A1%B5%E9%9D%A2%E3%80%82%0A%20%20%0Apackage%20%E6%96%87%E4%BB%B6%EF%BC%9A%E6%98%AF%E6%95%B4%E4%B8%AA%E9%A1%B9%E7%9B%AE%E7%94%A8%E7%9A%84%E5%88%B0%E7%9A%84%E6%89%80%E6%9C%89%E7%9A%84%E6%8F%92%E4%BB%B6%E7%9A%84json%E7%9A%84%E6%A0%BC%E5%BC%8F%0A%0A*%20%E6%AF%94%E5%A6%82%E8%BF%99%E4%B8%AA%E6%8F%92%E4%BB%B6%E7%9A%84%E5%90%8D%E7%A7%B0%EF%BC%8C%E7%89%88%E6%9C%AC%E5%8F%B7%E3%80%82%20%E5%BD%93%E5%9C%A8%E9%A1%B9%E7%9B%AE%E9%87%8C%E4%BD%BF%E7%94%A8npm%20install%20%E6%97%B6%20node%20%E4%BC%9A%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85%EF%BC%8C%20%E8%BF%99%E4%B8%AA%E6%96%87%E4%BB%B6%E9%87%8C%E7%9A%84%E6%89%80%E6%9C%89%E6%8F%92%E4%BB%B6%E3%80%82%0A%0A!%5Bd24dfc943ebc880a1fbb3212371d161f.png%5D(en-resource%3A%2F%2Fdatabase%2F4239%3A0)%0A%0A%E8%BF%98%E6%9C%89%E4%B8%80%E4%B8%AA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%EF%BC%9A%0A!%5B0ab76d11ca5b843957287446e432782b.png%5D(en-resource%3A%2F%2Fdatabase%2F4241%3A0)%0A%E8%BF%99%E4%B8%AAdist%20%E6%96%87%E4%BB%B6%E5%A4%B9%20%E6%98%AF%E5%9C%A8%E6%89%A7%E8%A1%8C%E4%BA%86%20npm%20run%20build%20%E6%89%93%E5%8C%85%E6%8C%87%E4%BB%A4%E4%B9%8B%E5%90%8E%E6%89%8D%E4%BC%9A%E5%87%BA%E7%8E%B0%E7%9A%84%EF%BC%8C%20%E6%95%B4%E4%B8%AA%E9%A1%B9%E7%9B%AE%E5%86%99%E5%A5%BD%E4%B9%8B%EF%BC%8C%E6%89%93%E5%8C%85%E5%87%BA%E6%9D%A5%E7%9A%84%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6%E9%83%BD%E4%BC%9A%E5%9C%A8%E8%BF%99%E9%87%8C%EF%BC%8C%E5%8F%AA%E9%9C%80%E8%A6%81%E8%AE%BF%E9%97%AE%E6%96%87%E4%BB%B6%E5%A4%B9%E9%87%8C%E7%9A%84index%E6%96%87%E4%BB%B6%E5%8F%AF%E4%BB%A5%E8%BF%9B%E5%85%A5%E5%BA%94%E7%94%A8%E4%BA%86%0A%0A%23%23%23%23%20%E9%A1%B9%E7%9B%AE%E8%BF%90%E8%A1%8C%E5%88%86%E6%9E%90%0A**%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%85%A5%E5%8F%A3%EF%BC%9A**%0A%E9%A6%96%E5%85%88%2C%E9%A1%B9%E7%9B%AE%E9%80%9A%E8%BF%87webpack%E8%BF%9B%E8%A1%8C%E6%89%93%E5%8C%85%2C%E9%9C%80%E8%A6%81%E9%85%8D%E7%BD%AE%E4%B8%80%E4%B8%AA%E5%85%A5%E5%8F%A3%E6%96%87%E4%BB%B6%E5%9C%A8%E8%84%9A%E6%89%8B%E6%9E%B6%E5%B7%A5%E7%A8%8B%E4%B8%AD%2C%E5%85%A5%E5%8F%A3%E6%96%87%E4%BB%B6%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BD%8D%E4%BA%8Ebuild%2Fwebpack.base.conf.js%20%EF%BC%9A%E4%B8%BAdev%E5%92%8Cprod%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%85%AC%E7%94%A8%E9%85%8D%E7%BD%AE%2C%E5%88%86%E5%88%AB%E5%9C%A8dev%E5%92%8Cprod%E9%85%8D%E7%BD%AE%E4%B8%AD%E8%A2%AB%E5%AF%BC%E5%85%A5%0A!%5Bd9fbae1d2a7f3c4e61b8adee4904b465.png%5D(en-resource%3A%2F%2Fdatabase%2F4243%3A0)%0A%E5%85%A5%E5%8F%A3%E6%96%87%E4%BB%B6%E6%8C%87%E5%90%91%E4%BA%86src%2Fmain.js%2C(webpack%E5%AF%B9%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%89%93%E5%8C%85%E5%85%A5%E5%8F%A3%E4%B8%BAmain.js)%0A%0A%0A**%E5%9C%A8%E5%85%A5%E5%8F%A3%E6%96%87%E4%BB%B6main.js%E4%B8%AD**%0A!%5Bf6a125ee0be57f392d0d0f2e07ac9826.png%5D(en-resource%3A%2F%2Fdatabase%2F4245%3A0)%0A%E5%BC%95%E5%85%A5%E4%BA%86Vue%2C%E6%A0%B9%E7%BB%84%E4%BB%B6App%2C%E5%92%8C%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6router%0A%E5%B9%B6%E5%9C%A8%E5%88%9D%E5%A7%8B%E5%8C%96Vue%E5%AE%9E%E4%BE%8B%E6%97%B6%2C%0A*%20%E9%85%8D%E7%BD%AE%E6%8C%82%E8%BD%BD%E5%88%B0%23app%2C%0A*%20%E6%B3%A8%E5%86%8Crouter%E6%8F%92%E4%BB%B6%2C%0A*%20%E4%BD%BF%E7%94%A8App%E6%A0%B9%E7%BB%84%E4%BB%B6%E6%8C%82%E8%BD%BD%E7%9A%84%23app%E4%BD%8D%E4%BA%8E%E9%A1%B9%E7%9B%AE%E8%B7%9F%E7%9B%AE%E5%BD%95%E7%9A%84index.html%E4%B8%AD%0A%0A%0A**index.html**%0A%E8%A1%A8%E9%9D%A2%E4%B8%8A%E6%98%AF%E4%B8%80%E4%B8%AA%E7%A9%BA%E7%9A%84html%E6%96%87%E6%A1%A3%2C%E4%BB%85%E6%8F%90%E4%BE%9B%E4%BA%86%E4%B8%80%E4%B8%AA%E6%8C%82%E8%BD%BD%E7%82%B9%E3%80%82%0A%E5%AE%9E%E9%99%85%E5%B9%B6%E4%B8%8D%E6%98%AF%E8%BF%99%E6%A0%B7%2C%E8%BF%99%E4%B8%AAindex.html%E6%98%AF%E4%BD%9C%E4%B8%BA%E4%B8%80%E4%B8%AA%E6%A8%A1%E6%9D%BF%E5%AD%98%E5%9C%A8%E7%9A%84%2C%0A%E8%BF%99%E9%87%8C%E6%B6%89%E5%8F%8A%E5%88%B0webpack%E7%9A%84%E6%8F%92%E4%BB%B6HtmlWebpackPlugin%0A%0A*%20%E5%9C%A8build%2Fwebpack.dev.conf.js%0A%0A!%5B0e2497754d99fd7ce2a1694d436e7514.png%5D(en-resource%3A%2F%2Fdatabase%2F4247%3A0)%0A%0A*%20HtmlWebpackPlugin%E6%8F%92%E4%BB%B6%E8%83%BD%E6%A0%B9%E6%8D%AE%E6%A8%A1%E6%9D%BF%E7%94%9F%E6%88%90html%2C%E5%B9%B6%E4%B8%BA%E7%94%9F%E6%88%90%E7%9A%84html%E9%A1%B5%E9%9D%A2%E6%B7%BB%E5%8A%A0%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%BC%95%E7%94%A8script%E6%A0%87%E7%AD%BE%0A*%20%E6%89%80%E4%BB%A5%E6%88%91%E4%BB%AC%E7%9C%8B%E5%88%B0%E7%9A%84index.html%E5%B9%B6%E6%B2%A1%E6%9C%89%E5%BC%95%E7%94%A8webpack%E6%89%93%E5%8C%85%E5%90%8E%E7%9A%84%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%0A%0A**%E6%A0%B9%E7%BB%84%E4%BB%B6App**%0A%E5%88%86%E4%B8%BA%E4%B8%89%E4%B8%AA%E9%83%A8%E5%88%86%3A%E5%9F%BA%E6%9C%AC%E4%B8%8A%E6%89%80%E6%9C%89%E7%9A%84.vue%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6%E6%96%87%E4%BB%B6%E5%88%86%E4%B8%BA%E4%B8%89%E4%B8%AA%E9%83%A8%E5%88%86%3A%0A*%20template%3A%20%E7%BB%84%E4%BB%B6%E7%9A%84%E6%A8%A1%E6%9D%BFHtml%20%E5%8F%AF%E4%BD%BF%E7%94%A8%E6%98%AF%E5%86%99html%E7%9A%84%E5%BD%A2%E5%BC%8F%E5%A3%B0%E6%98%8E%E7%BB%84%E4%BB%B6%E6%A8%A1%E6%9D%BF%2C%E4%B8%8D%E5%86%8D%E9%9C%80%E8%A6%81%E6%8B%BC%E6%8E%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%0A*%20script%3A%20%E7%BB%84%E4%BB%B6%E7%9A%84js%E4%BB%A3%E7%A0%81%0A*%20style%3A%20%E7%BB%84%E4%BB%B6%E7%9A%84CSS%E6%A0%B7%E5%BC%8F%20%E5%8F%AF%E6%B7%BB%E5%8A%A0scoped%E5%B1%9E%E6%80%A7%2C%E4%BD%BFCSS%E5%8F%AA%E5%AF%B9%E5%BD%93%E5%89%8D%E7%BB%84%E4%BB%B6%E6%9C%89%E6%95%88%0Atemplate%E4%B8%AD%E4%BD%BF%E7%94%A8%E4%BA%86%3Crouter-view%2F%3E%E7%94%A8%E4%BA%8E%E8%B7%AF%E7%94%B1%E9%A1%B5%E9%9D%A2%E5%88%87%E6%8D%A2(SPA%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8)%0A%E8%B7%AF%E7%94%B1%E9%85%8D%E7%BD%AE%E5%9C%A8src%2Frouter%2Findex.js%E4%B8%AD%0A%0A**%E8%B7%AF%E7%94%B1%E9%85%8D%E7%BD%AEsrc%2Frouter%2Findex.js**%0A%0A*%20src%2Frouter%2Findex.js%E6%9C%80%E7%BB%88%E5%AF%BC%E5%87%BA%E4%BA%86%E4%B8%80%E4%B8%AA%E9%85%8D%E7%BD%AE%E4%BA%86%E8%B7%AF%E7%94%B1%E7%9A%84%E8%B7%AF%E7%94%B1%E5%99%A8%E5%AE%9E%E4%BE%8B%0A*%20src%2Frouter%2Findex.js%E5%9C%A8%E5%85%A5%E5%8F%A3%E6%96%87%E4%BB%B6main%E4%B8%AD%E8%A2%AB%E5%BC%95%E5%85%A5%2C%E5%B9%B6%E5%9C%A8%E5%AE%9E%E4%BE%8B%E5%8C%96vue%E6%97%B6%E6%B3%A8%E5%85%A5%0A*%20%E7%94%B1%E4%BA%8E%E9%BB%98%E8%AE%A4%E8%B7%AF%E5%BE%84%2F%E4%BD%BF%E7%94%A8%E7%BB%84%E4%BB%B6HelloWorld%E8%BF%9B%E8%A1%8C%E6%98%BE%E7%A4%BA(%3Crouter-view%2F%3E)%0A*%20%E6%89%80%E4%BB%A5%E8%AE%BF%E9%97%AEhttp%3A%2F%2Flocalhost%3A8080%2F%23%2F%E6%97%B6%2C%E7%8E%B0%E5%AE%9E%E7%9A%84%E8%A7%86%E5%9B%BE%E6%98%AFHelloWorld%E7%BB%84%E4%BB%B6%E6%A0%B7%E5%BC%8F%0A%0A**%E5%A6%82%E6%9E%9C%E9%9C%80%E8%A6%81VUE%E9%A1%B9%E7%9B%AE%E5%85%B3%E9%97%ADEslint%E8%AF%AD%E6%B3%95%E6%A3%80%E6%B5%8B%E7%9A%84%E6%96%B9%E6%B3%95**%0A!%5Bc706b70e0aa5ae2b7ed03965d229788e.png%5D(en-resource%3A%2F%2Fdatabase%2F4249%3A0)%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%23%23%23%23%20cli%E9%A1%B9%E7%9B%AE%E5%86%99%E6%B3%95%EF%BC%9A%0A%E7%AC%AC%E4%B8%80%EF%BC%9A%0A!%5Bbd7505685e40f2225557ab4806870f2c.png%5D(en-resource%3A%2F%2Fdatabase%2F4235%3A0)%0A%0A%0A%0A</center></span>
+</div></body></html> 
